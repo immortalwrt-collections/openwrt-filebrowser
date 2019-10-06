@@ -46,9 +46,16 @@ ifeq ($(ARCH),x86_64)
 	$(INSTALL_BIN) ./files/x86_64 $(1)/usr/bin/filebrowser
 endif
 ifeq ($(ARCH),arm)
-	$(INSTALL_BIN) ./files/arm $(1)/usr/bin/filebrowser
+ifeq ($(BOARD),bcm53xx)
+	 $(INSTALL_BIN) ./files/armv7 $(1)/usr/bin/filebrowser
+else
+	 $(INSTALL_BIN) ./files/arm $(1)/usr/bin/filebrowser
+endif
 endif
 ifeq ($(ARCH),arm64)
+	$(INSTALL_BIN) ./files/arm64 $(1)/usr/bin/filebrowser
+endif
+ifeq ($(ARCH),aarch64)
 	$(INSTALL_BIN) ./files/arm64 $(1)/usr/bin/filebrowser
 endif
 ifeq ($(ARCH),mips)
