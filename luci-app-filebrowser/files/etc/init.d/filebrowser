@@ -24,7 +24,6 @@ init_config() {
     
     [ -d $root_dir ] || mkdir -p "${root_dir}"
     [ -d $db_dir ] || mkdir -p "${db_dir}"
-    [ -f /usr/bin/filebrowser_alias ] || ln /usr/bin/filebrowser /usr/bin/filebrowser_alias
 }
 
 start_service() {
@@ -52,16 +51,11 @@ start_service() {
     
     [ "${db_dir}" == "/" ] || db_dir="${db_dir%*/}"
     
-    # password_hashed="$(/usr/bin/filebrowser_alias hash "$(echo ${password})"| sed 's/$/\$/g')"
-    # TODO: 使用luci启动时，password_hashed没法计算
-    password_hashed="$( /usr/bin/filebrowser_alias hash ${password} )"
-    _info "password: ${password}"
-    _info "password_hashed: ${password_hashed}"
-	_info "database path: ${db_dir}/${db_name}"
-    # if [ "${password_hashed}" == "" ];then 
-    #     service filebrowser restart
-	# 	return 1;
-    # fi
+    # TIP: 使用luci启动时，filebrowser没法计算password hash
+    password_hashed="$( /usr/bin/filebrowser_HashPwd ${password} )"
+    # _info "password: ${password}"
+    # _info "password_hashed: ${password_hashed}" # using cmd `logread -f` to check it
+	# _info "database path: ${db_dir}/${db_name}"
     if [ "${addr_type}" == "local" ];then
         addr="127.0.0.1"
         elif [ "${addr_type}" == "lan" ];then
