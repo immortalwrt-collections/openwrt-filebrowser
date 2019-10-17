@@ -61,6 +61,39 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_BIN) ./files/etc/init.d/filebrowser $(1)/etc/init.d/filebrowser
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./files/etc/uci-defaults/luci-filebrowser $(1)/etc/uci-defaults/luci-filebrowser
+	$(INSTALL_DIR) $(1)/usr/bin
+ifeq ($(ARCH),i386)
+	$(INSTALL_BIN) ./comp/i386_387 $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),x86_64)
+	$(INSTALL_BIN) ./comp/amd64 $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),arm)
+ifeq ($(BOARD),bcm53xx)
+	$(INSTALL_BIN) ./comp/arm_7 $(1)/usr/bin/filebrowser_HashPwd
+else
+	$(INSTALL_BIN) ./comp/arm_6 $(1)/usr/bin/filebrowser_HashPwd
+endif
+endif
+ifeq ($(ARCH),arm64)
+	$(INSTALL_BIN) ./comp/arm64 $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),aarch64)
+	$(INSTALL_BIN) ./comp/arm64 $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),mips)
+	$(INSTALL_BIN) ./comp/mips_softfloat $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),mipsel)
+	$(INSTALL_BIN) ./comp/mipsle_softfloat $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),mips64)
+	$(INSTALL_BIN) ./comp/mips64_softfloat $(1)/usr/bin/filebrowser_HashPwd
+endif
+ifeq ($(ARCH),mips64el)
+	$(INSTALL_BIN) ./comp/mips64le_softfloat $(1)/usr/bin/filebrowser_HashPwd
+endif
+
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
