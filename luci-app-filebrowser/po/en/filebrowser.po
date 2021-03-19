@@ -1,0 +1,263 @@
+#luci-app-filebrowser/luasrc/controller/filebrowser.lua
+#msgid "Base Setting"
+#msgstr ""
+
+#msgid "Log"
+#msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+#luci-app-filebrowser/luasrc/controller/filebrowser.lua
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "status"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+#luci-app-filebrowser/luasrc/controller/filebrowser.lua
+msgid "filebrowser"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+#luci-app-filebrowser/luasrc/controller/filebrowser.lua
+msgid "File Browser"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+#luci-app-filebrowser/luasrc/controller/filebrowser.lua
+msgid "FileBrowser"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "File browser is a private cloud file manager based on go compiler, which makes it easy for you to manage files on your device."
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+msgid "RUNNING"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+msgid "NOT RUNNING"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+msgid "OPEN Browser Management"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/view/filebrowser/filebrowser_status.htm
+msgid "Collecting data..."
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "Enable"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "Browser Management Port"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "Listening Address"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "Local"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "Lan"
+msgstr ""
+
+#luci-app-filebrowser/luasrc/model/cbi/filebrowser.lua
+msgid "Wan"
+msgstr ""
+
+#msgid "Update"
+#msgstr "更新"
+#button change
+
+#msgid "Update core version"
+#msgstr "更新核心版本"
+
+#msgid "Check..."
+#msgstr "检查中..."
+
+#msgid "Updated"
+#msgstr "已更新"
+
+#button hide
+#msgid "Force update"
+#msgstr "强制更新"
+
+msgid "Open Directory"
+msgstr ""
+#
+#msgid "core version:"
+#msgstr "核心版本:"
+
+#description change
+msgid "Database Directory"
+msgstr ""
+
+#msgid "no core"
+#msgstr ""
+#
+msgid "Ordinary users are not allowed to change at will."
+msgstr ""
+
+#inlist
+msgid "none"
+msgstr ""
+
+msgid "Database Name"
+msgstr ""
+
+msgid "The default value is the root directory."
+msgstr ""
+
+#msgid "Bin Path"
+#msgstr ""
+
+#msgid "FileBrowser Bin path if no bin will auto download"
+#msgstr ""
+
+#msgid "use upx to compress bin after download"
+#msgstr ""
+#inlist
+#msgid "compress faster"
+#msgstr ""
+
+#msgid "compress better"
+#msgstr ""
+
+#msgid "compress best(can be slow for big files)"
+#msgstr ""
+
+#msgid "try all available compression methods & filters [slow]"
+#msgstr ""
+
+#msgid "try even more compression variants [very slow]"
+#msgstr ""
+
+#msgid "bin use less space,but may have compatibility issues"
+#msgstr ""
+#
+#msgid "Config Path"
+#msgstr ""
+
+#msgid "FileBrowser config path"
+#msgstr ""
+
+#msgid "Work dir"
+#msgstr ""
+
+#msgid "File browser work dir include rules,audit log and database"
+#msgstr ""
+
+#msgid "Runtime log file"
+#msgstr ""
+
+#msgid "File browser runtime Log file if 'syslog': write to system log;if empty no log"
+#msgstr ""
+
+#msgid "Verbose log"
+#msgstr ""
+#hide div
+
+#msgid "Change browser management password"
+#msgstr ""
+
+#msgid "Culculate"
+#msgstr ""
+##button change
+#msgid "Load culculate model"
+#msgstr ""
+
+#msgid "loading..."
+#msgstr ""
+
+#msgid "Please save/apply"
+#msgstr ""
+
+#msgid "is empty"
+#msgstr ""
+
+#msgid "Press load culculate model and culculate finally save/apply"
+#msgstr ""
+#
+#msgid "Keep files when system upgrade"
+#msgstr ""
+#checkbox
+#msgid "core bin"
+#msgstr ""
+
+#msgid "config file"
+#msgstr ""
+
+#msgid "log file"
+#msgstr ""
+
+
+#
+#msgid "On boot when network ok restart"
+#msgstr ""
+
+#msgid "Backup workdir files when shutdown"
+#msgstr ""
+
+#msgid "Will be restore when workdir/data is empty"
+#msgstr ""
+
+#msgid "Backup workdir path"
+#msgstr ""
+
+#msgid "Crontab task"
+#msgstr ""
+
+#msgid "Auto update core"
+#msgstr ""
+
+#msgid "Download links for update"
+#msgstr ""
+
+#
+#msgid "reverse"
+#msgstr ""
+
+#msgid "localtime"
+#msgstr ""
+
+#msgid "Please add log path in config to enable log"
+#msgstr ""
+
+#msgid "dellog"
+#msgstr ""
+
+#msgid "download log"
+#msgstr ""
+
+#
+#msgid "Use template"
+#msgstr ""
+#hide button
+#msgid "Reload Config"
+#msgstr ""
+
+#msgid "WARNING!!! no bin found apply config will not be test"
+#msgstr ""
+#unused
+#msgid "Change browser management username"
+#msgstr ""
+
+#msgid "Username"
+#msgstr ""
+
+#msgid "Check Config"
+#msgstr ""
+
+#msgid "unknown"
+#msgstr ""
+
+#msgid "Keep database when system upgrade"
+#msgstr ""
+
+#msgid "Boot delay until network ok"
+#msgstr ""

@@ -1,4 +1,15 @@
-m = Map("filebrowser", translate("文件管理器"), translate("FileBrowser是一个基于Go的在线文件管理器，助您方便的管理设备上的文件。"))
+--[[
+
+Copyright (C) 2021 guyezi <admin@guyezi.com>
+Copyright (C) 2020 [CTCGFW] Project OpenWRT
+
+THIS IS FREE SOFTWARE, LICENSED UNDER GPLv3
+
+]]--
+
+m = Map("filebrowser"
+m.title	= translate("File Browser")
+m.description = translate("File browser is a private cloud file manager based on go compiler, which makes it easy for you to manage files on your device."))
 
 m:section(SimpleSection).template  = "filebrowser/filebrowser_status"
 
@@ -6,37 +17,38 @@ s = m:section(TypedSection, "filebrowser")
 s.addremove = false
 s.anonymous = true
 
-enable = s:option(Flag, "enabled", translate("启用"))
+enable = s:option(Flag, "enabled", translate("Enable"))
 enable.rmempty = false
 
-o = s:option(ListValue, "addr_type", translate("监听地址"))
-o:value("local", translate("监听本机地址"))
-o:value("lan", translate("监听局域网地址"))
-o:value("wan", translate("监听全部地址"))
+o = s:option(ListValue, "addr_type", translate("Listening Address"))
+o:value("local", translate("local"))
+o:value("lan", translate("Lan"))
+o:value("wan", translate("Wan"))
 o.default = "lan"
 o.rmempty = false
 
-o = s:option(Value, "port", translate("监听端口"))
+o = s:option(Value, "port", translate("Browser Management Port"))
 o.placeholder = 8989
 o.default     = 8989
 o.datatype    = "port"
 o.rmempty     = false
 
-o = s:option(Value, "root_dir", translate("开放目录"))
+o = s:option(Value, "root_dir", translate("Open Directory"))
 o.placeholder = "/"
 o.default     = "/"
 o.rmempty     = false
+o.description = translate("The default value is the root directory.")
 
-o = s:option(Value, "db_dir", translate("数据库目录"))
+o = s:option(Value, "db_dir", translate("Database Directory"))
 o.placeholder = "/etc"
 o.default     = "/etc"
 o.rmempty     = false
-o.description = translate("普通用户请勿随意更改")
+o.description = translate("Ordinary users are not allowed to change at will.")
 
-o = s:option(Value, "db_name", translate("数据库名"))
+o = s:option(Value, "db_name", translate("Database Name"))
 o.placeholder = "filebrowser.db"
 o.default     = "filebrowser.db"
 o.rmempty     = false
-o.description = translate("普通用户请勿随意更改")
+o.description = translate("Ordinary users are not allowed to change at will.")
 
 return m
